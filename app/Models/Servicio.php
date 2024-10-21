@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cliente extends Model
+class Servicio extends Model
 {
-    protected $fillable = ['nombre', 'apellido', 'telefono', 'email'];
+    protected $fillable = ['nombre', 'descripcion', 'duracion', 'precio'];
 
     public function reservas() {
         return $this->hasMany(Reserva::class);
